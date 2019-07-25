@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let card of bookcontent">
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top"[src]="card.coverImage" alt="" ></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a>{{card.title}}</a>
+
+                    </h4>
+                    <h6>{{card.id}}</h6>
+                    <h5>{{card.author}}</h5>
+                    <p class="card-text">{{card.description}}
+
+                    </p>
+                    <h5 class="card-price" >${{card.price}}</h5>
+
+
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-lg-12">
+       <a class="btn btn-primary" routerLink="../get">Add Blog</a>
+    </div>
+  </div>
+  <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">title</th>
+            <th scope="col">author</th>
+            <th scope="col">Description</th>
+            <th scope="col">coverImage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let card of Delete;let i = index;">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{card.title}}</td>
+            <td>{{card.author}}</td>
+            <td>{{card.description}}</td>
+            <td><div><img class="card-img-top" [src]="card.coverImage" alt=""></div></td>
+            <td>
+                <a routerLink="../put/{{card.id}}" class="btn btn-primary btn-sm">Edit</a>
+                <button (click)="deleteBlog(card.id)" class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
